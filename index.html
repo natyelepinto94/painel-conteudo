@@ -29,274 +29,197 @@
 }
 * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
 body { background: var(--bg); color: var(--text); font-family: "DM Sans", sans-serif; font-weight: 300; min-height: 100vh; }
-
-/* HEADER */
-header { background: var(–dark); padding: 16px 20px 12px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; border-bottom: 2px solid var(–accent); position: sticky; top: 0; z-index: 100; }
+header { background: var(--dark); padding: 16px 20px 12px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; border-bottom: 2px solid var(--accent); position: sticky; top: 0; z-index: 100; }
 .logo { font-family: BootzyTM; font-size: 21px; color: #f5f0eb; letter-spacing: 1px; }
-.logo span { color: var(–accent); }
-
-/* TABS */
+.logo span { color: var(--accent); }
 .tab-bar { display: flex; gap: 2px; background: #222; border-radius: 10px; padding: 3px; flex-wrap: wrap; }
-.tab { background: none; border: none; color: #888; font-family: “DM Sans”, sans-serif; font-size: 11px; font-weight: 500; padding: 7px 11px; border-radius: 8px; cursor: pointer; transition: all .2s; white-space: nowrap; }
-.tab.active { background: var(–accent); color: #fff; }
-
-/* SECTIONS */
+.tab { background: none; border: none; color: #888; font-family: "DM Sans", sans-serif; font-size: 11px; font-weight: 500; padding: 7px 11px; border-radius: 8px; cursor: pointer; transition: all .2s; white-space: nowrap; }
+.tab.active { background: var(--accent); color: #fff; }
 .sec { display: none; padding: 20px; max-width: 860px; margin: 0 auto; padding-bottom: 80px; }
 .sec.active { display: block; }
 .stitle { font-family: BootzyTM; font-size: 20px; margin-bottom: 3px; letter-spacing: .5px; }
-.ssub { font-size: 13px; color: var(–muted); margin-bottom: 18px; }
-.shead { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: 4px; }
-
-/* CARDS GRID */
+.ssub { font-size: 13px; color: var(--muted); margin-bottom: 18px; }
+.shead { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: 14px; }
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; margin-top: 14px; }
-.card { background: var(–surface); border: 1px solid var(–border); border-radius: var(–r); padding: 16px; transition: all .2s; }
-.card:hover { border-color: var(–accent); box-shadow: 0 4px 16px rgba(223,99,21,.1); transform: translateY(-2px); }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r); padding: 16px; transition: all .2s; }
+.card:hover { border-color: var(--accent); box-shadow: 0 4px 16px rgba(223,99,21,.1); transform: translateY(-2px); }
 .ctag { display: inline-block; font-size: 10px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; padding: 3px 9px; border-radius: 20px; margin-bottom: 9px; }
-.ctag-ia { background: var(–al); color: var(–accent); border: 1px solid var(–accent); }
+.ctag-ia { background: var(--al); color: var(--accent); border: 1px solid var(--accent); }
 .ctag-ref { background: #f0e8ff; color: #7c4dcc; border: 1px solid #7c4dcc; }
-.ctag-gancho { background: #e8fff0; color: var(–ok); border: 1px solid var(–ok); }
 .chook { font-size: 14px; font-weight: 500; line-height: 1.45; font-style: italic; margin-bottom: 11px; }
 .cmeta { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 11px; }
-.cpill { font-size: 11px; padding: 3px 9px; border-radius: 20px; border: 1px solid var(–border); color: var(–muted); background: var(–s2); }
+.cpill { font-size: 11px; padding: 3px 9px; border-radius: 20px; border: 1px solid var(--border); color: var(--muted); background: var(--s2); }
 .cact { display: flex; gap: 6px; }
-
-/* BUTTONS */
-.bsm { font-family: “DM Sans”, sans-serif; font-size: 12px; font-weight: 500; padding: 7px 13px; border-radius: 8px; border: none; cursor: pointer; transition: opacity .2s; }
+.bsm { font-family: "DM Sans", sans-serif; font-size: 12px; font-weight: 500; padding: 7px 13px; border-radius: 8px; border: none; cursor: pointer; transition: opacity .2s; }
 .bsm:hover { opacity: .8; }
-.bpr { background: var(–accent); color: #fff; }
-.bgh { background: var(–s2); color: var(–muted); border: 1px solid var(–border); }
+.bpr { background: var(--accent); color: #fff; }
+.bgh { background: var(--s2); color: var(--muted); border: 1px solid var(--border); }
 .bdn { background: #fff0f0; color: #cc4444; border: 1px solid #ffcccc; }
-.bmain { font-family: “DM Sans”, sans-serif; font-size: 14px; font-weight: 600; padding: 11px 24px; border-radius: 10px; border: none; cursor: pointer; background: var(–accent); color: #fff; transition: opacity .2s, transform .1s; display: inline-flex; align-items: center; gap: 7px; -webkit-appearance: none; }
+.bmain { font-family: "DM Sans", sans-serif; font-size: 14px; font-weight: 600; padding: 11px 24px; border-radius: 10px; border: none; cursor: pointer; background: var(--accent); color: #fff; transition: opacity .2s, transform .1s; display: inline-flex; align-items: center; gap: 7px; -webkit-appearance: none; }
 .bmain:hover { opacity: .88; transform: translateY(-1px); }
 .bmain:disabled { opacity: .4; cursor: not-allowed; transform: none; }
-.bout { background: none; border: 1px solid var(–border); color: var(–text); }
-
-/* FORM */
+.bout { background: none; border: 1px solid var(--border); color: var(--text); }
 .field { margin-bottom: 13px; }
-.lbl { font-size: 10px; font-weight: 600; color: var(–muted); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 5px; display: block; }
-input[type=text], input[type=number], textarea, select { background: var(–s2); border: 1px solid var(–border); border-radius: 8px; color: var(–text); font-family: “DM Sans”, sans-serif; font-size: 13px; padding: 10px 13px; outline: none; transition: border-color .2s; width: 100%; -webkit-appearance: none; }
-input:focus, textarea:focus, select:focus { border-color: var(–accent); }
+.lbl { font-size: 10px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 5px; display: block; }
+input[type=text], input[type=number], textarea, select { background: var(--s2); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-family: "DM Sans", sans-serif; font-size: 13px; padding: 10px 13px; outline: none; transition: border-color .2s; width: 100%; -webkit-appearance: none; }
+input:focus, textarea:focus, select:focus { border-color: var(--accent); }
 textarea { resize: vertical; min-height: 72px; }
 .fgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 @media (max-width: 540px) { .fgrid { grid-template-columns: 1fr; } }
 .full { grid-column: 1 / -1; }
-
-/* RESULT / ERROR */
-.rbox { background: var(–s2); border: 1px solid var(–border); border-left: 3px solid var(–accent); border-radius: 10px; padding: 16px; margin-top: 14px; display: none; animation: fi .3s ease; }
+.rbox { background: var(--s2); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 16px; margin-top: 14px; display: none; }
 .rbox.show { display: block; }
-.rhook { font-style: italic; font-size: 15px; color: var(–accent); font-weight: 500; margin-bottom: 10px; line-height: 1.4; }
+.rhook { font-style: italic; font-size: 15px; color: var(--accent); font-weight: 500; margin-bottom: 10px; line-height: 1.4; }
 .rrow { margin-bottom: 6px; font-size: 13px; }
-.rrow strong { color: var(–muted); font-weight: 600; margin-right: 5px; font-size: 10px; text-transform: uppercase; letter-spacing: .05em; }
+.rrow strong { color: var(--muted); font-weight: 600; margin-right: 5px; font-size: 10px; text-transform: uppercase; letter-spacing: .05em; }
 .ebox { background: #fff0f0; border: 1px solid #ffcccc; border-radius: 10px; padding: 13px; margin-top: 12px; font-size: 13px; color: #cc4444; display: none; }
 .ebox.show { display: block; }
-@keyframes fi { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
-
-/* GANCHOS LIST */
-.gancho-item { background: var(–surface); border: 1px solid var(–border); border-radius: 10px; padding: 14px 16px; margin-bottom: 8px; display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; transition: all .2s; }
-.gancho-item:hover { border-color: var(–accent); }
-.gancho-txt { font-style: italic; font-size: 14px; font-weight: 500; flex: 1; line-height: 1.4; }
-.gancho-cat { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: var(–ok); margin-top: 4px; }
-
-/* STARS */
 .star-row { display: flex; gap: 6px; margin-top: 4px; }
-.star { font-size: 26px; cursor: pointer; color: #ccc; transition: color .15s, transform .1s; user-select: none; }
-.star.active { color: var(–accent); transform: scale(1.1); }
-
-/* TABLE */
+.star { font-size: 26px; cursor: pointer; color: #ccc; transition: color .15s; user-select: none; }
+.star.active { color: var(--accent); }
 .ttable { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 12px; }
-.ttable th { text-align: left; padding: 9px 12px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .07em; color: var(–muted); border-bottom: 2px solid var(–border); background: var(–s2); }
-.ttable td { padding: 11px 12px; border-bottom: 1px solid var(–border); vertical-align: middle; }
-.ttable tr:hover td { background: var(–s2); }
-.stars-d { color: var(–accent); font-size: 13px; }
-
-/* STATS */
+.ttable th { text-align: left; padding: 9px 12px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); border-bottom: 2px solid var(--border); background: var(--s2); }
+.ttable td { padding: 11px 12px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+.ttable tr:hover td { background: var(--s2); }
+.stars-d { color: var(--accent); font-size: 13px; }
 .sgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 10px; margin-bottom: 22px; }
-.scard { background: var(–surface); border: 1px solid var(–border); border-radius: var(–r); padding: 15px; text-align: center; }
-.snum { font-family: BootzyTM; font-size: 26px; color: var(–accent); line-height: 1; margin-bottom: 4px; }
-.slbl { font-size: 10px; color: var(–muted); text-transform: uppercase; letter-spacing: .06em; }
-
-/* BARS */
+.scard { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r); padding: 15px; text-align: center; }
+.snum { font-family: BootzyTM; font-size: 26px; color: var(--accent); line-height: 1; margin-bottom: 4px; }
+.slbl { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
 .asec { margin-bottom: 22px; }
 .asec h3 { font-family: BootzyTM; font-size: 15px; margin-bottom: 10px; letter-spacing: .5px; }
 .brow { display: flex; align-items: center; gap: 9px; margin-bottom: 8px; font-size: 12px; }
-.blbl { width: 120px; flex-shrink: 0; color: var(–muted); }
-.btrk { flex: 1; background: var(–s2); border-radius: 4px; height: 8px; border: 1px solid var(–border); }
-.bfil { height: 8px; border-radius: 3px; background: var(–accent); transition: width .6s ease; }
+.blbl { width: 120px; flex-shrink: 0; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.btrk { flex: 1; background: var(--s2); border-radius: 4px; height: 8px; border: 1px solid var(--border); }
+.bfil { height: 8px; border-radius: 3px; background: var(--accent); transition: width .6s ease; }
 .bval { width: 36px; text-align: right; font-weight: 600; font-size: 12px; }
-
-/* MISC */
-.empty { text-align: center; padding: 46px 20px; color: var(–muted); }
+.empty { text-align: center; padding: 46px 20px; color: var(--muted); }
 .empty .ei { font-size: 36px; margin-bottom: 11px; }
 .empty p { font-size: 14px; line-height: 1.6; }
-hr.div { border: none; border-top: 1px solid var(–border); margin: 20px 0; }
+hr.div { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
 .badge { display: inline-block; font-size: 10px; padding: 2px 8px; border-radius: 20px; font-weight: 600; }
-.bg { background: var(–al); color: var(–accent); }
-.bgn { background: #edfff5; color: var(–ok); }
+.bg { background: var(--al); color: var(--accent); }
+.bgn { background: #edfff5; color: var(--ok); }
 .spinner { display: inline-block; width: 13px; height: 13px; border: 2px solid rgba(255,255,255,.3); border-top-color: #fff; border-radius: 50%; animation: spin .7s linear infinite; vertical-align: middle; }
 @keyframes spin { to { transform: rotate(360deg); } }
-#toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(20px); background: var(–ok); color: #fff; font-size: 13px; font-weight: 500; padding: 10px 22px; border-radius: 30px; opacity: 0; transition: all .3s; pointer-events: none; z-index: 999; white-space: nowrap; }
+#toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(20px); background: var(--ok); color: #fff; font-size: 13px; font-weight: 500; padding: 10px 22px; border-radius: 30px; opacity: 0; transition: all .3s; pointer-events: none; z-index: 999; white-space: nowrap; }
 #toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
-.top-card { background: var(–surface); border: 1px solid var(–border); border-radius: 10px; padding: 14px; margin-bottom: 8px; display: flex; gap: 12px; align-items: flex-start; }
-.top-n { font-family: BootzyTM; font-size: 26px; color: var(–accent); min-width: 28px; line-height: 1; }
-.genpairs { display: flex; gap: 14px; flex-wrap: wrap; align-items: flex-start; }
-.genbox { background: var(–surface); border: 1px solid var(–border); border-radius: var(–r); padding: 20px; flex: 1; min-width: 260px; box-shadow: 0 2px 8px rgba(0,0,0,.04); }
+.top-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 14px; margin-bottom: 8px; display: flex; gap: 12px; align-items: flex-start; }
+.top-n { font-family: BootzyTM; font-size: 26px; color: var(--accent); min-width: 28px; line-height: 1; }
+.genbox { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r); padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,.04); }
 .genbox h3 { font-family: BootzyTM; font-size: 16px; margin-bottom: 4px; letter-spacing: .5px; }
-.genbox p { font-size: 13px; color: var(–muted); margin-bottom: 15px; }
-.stories-out { background: var(–surface); border: 1px solid var(–border); border-left: 3px solid var(–accent); border-radius: 10px; padding: 18px; margin-top: 16px; display: none; }
+.genbox p { font-size: 13px; color: var(--muted); margin-bottom: 15px; }
+.subview { display: none; }
+.subview.active { display: block; }
+.stories-out { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 18px; margin-top: 16px; display: none; }
 .stories-out.show { display: block; }
-.story-item { padding: 12px 0; border-bottom: 1px solid var(–border); }
+.story-item { padding: 12px 0; border-bottom: 1px solid var(--border); }
 .story-item:last-child { border-bottom: none; }
-.story-num { font-family: BootzyTM; font-size: 13px; color: var(–accent); margin-bottom: 3px; }
-.story-txt { font-size: 13px; line-height: 1.5; }
-.conc-out { background: var(–surface); border: 1px solid var(–border); border-left: 3px solid #7c4dcc; border-radius: 10px; padding: 18px; margin-top: 16px; display: none; }
+.story-num { font-family: BootzyTM; font-size: 12px; color: var(--accent); margin-bottom: 3px; }
+.conc-out { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid #7c4dcc; border-radius: 10px; padding: 18px; margin-top: 16px; display: none; }
 .conc-out.show { display: block; }
-.conc-item { padding: 10px 0; border-bottom: 1px solid var(–border); font-size: 13px; line-height: 1.5; }
+.conc-item { padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 13px; line-height: 1.5; }
 .conc-item:last-child { border-bottom: none; }
-.conc-label { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: var(–muted); margin-bottom: 3px; }
+.conc-label { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin-bottom: 3px; }
+.gancho-item { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; margin-bottom: 8px; display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.gancho-cat { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: var(--ok); margin-top: 4px; }
 </style>
-
 </head>
 <body>
 
 <header>
   <div class="logo">Painel de <span>Conteúdo</span></div>
   <nav class="tab-bar">
-    <button class="tab active" onclick="go('reels')">🎬 Reels</button>
-    <button class="tab" onclick="go('carrossel')">📱 Carrosséis</button>
-    <button class="tab" onclick="go('stories')">✨ Stories</button>
-    <button class="tab" onclick="go('ganchos')">🪝 Ganchos</button>
-    <button class="tab" onclick="go('concorrente')">🔍 Concorrente</button>
+    <button class="tab active" onclick="goTab('reels')">🎬 Reels</button>
+    <button class="tab" onclick="goTab('carrossel')">📱 Carrosséis</button>
+    <button class="tab" onclick="goTab('stories')">✨ Stories</button>
+    <button class="tab" onclick="goTab('ganchos')">🪝 Ganchos</button>
+    <button class="tab" onclick="goTab('concorrente')">🔍 Concorrente</button>
   </nav>
 </header>
 
-<!-- ══════════════════════════════════════
-     REELS DE TESTE
-══════════════════════════════════════ -->
+<!-- REELS -->
 
 <div id="sec-reels" class="sec active">
   <div class="shead">
     <div>
       <div class="stitle">Reels de Teste</div>
-      <div class="ssub">Gere ideias, registre resultados e descubra o que converte seguidores</div>
+      <div class="ssub">Gere ideias, registre resultados e descubra o que converte</div>
     </div>
     <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
-      <select id="rFiltro" onchange="renderReels()" style="width:auto;font-size:12px;padding:7px 11px;">
-        <option value="">Todos os formatos</option>
-        <option>Talking head</option><option>POV</option><option>Tutorial</option>
-        <option>Trend/áudio</option><option>Storytelling</option><option>Bastidores</option><option>Provocação</option>
-      </select>
-      <select id="rVista" onchange="renderReels()" style="width:auto;font-size:12px;padding:7px 11px;">
+      <select id="rVista" onchange="goSubview('r',this.value)" style="width:auto;font-size:12px;padding:7px 11px;">
+        <option value="gerar">Gerar ideia</option>
         <option value="banco">Banco de ideias</option>
-        <option value="testes">Testes registrados</option>
+        <option value="testes">Registrar teste</option>
         <option value="analise">Análise</option>
       </select>
     </div>
   </div>
 
-  <!-- BANCO -->
-
-  <div id="rv-banco">
-    <div style="margin-bottom:14px;">
-      <div class="genbox" style="max-width:660px;">
-        <h3>Gerar ideia de Reel</h3>
-        <p>Descreva o contexto: nicho, perfil de referência, o que quer testar</p>
-        <div class="field">
-          <label class="lbl">Contexto (nicho, perfil de referência, tema...)</label>
-          <textarea id="rCtx" placeholder="ex: social media para nutricionistas — quero testar algo parecido com o que @fulana faz, ela usa muito POV e hooks com pergunta&#10;&#10;ou: dentista harmonização orofacial — ideias pra atrair pacientes novas"></textarea>
-        </div>
-        <div class="field">
-          <label class="lbl">Formato preferido</label>
-          <select id="rFmt">
-            <option value="">Qualquer formato</option>
-            <option>Talking head</option><option>POV</option><option>Tutorial</option>
-            <option>Trend/áudio</option><option>Storytelling</option><option>Bastidores</option><option>Provocação</option>
-          </select>
-        </div>
-        <button class="bmain" id="btnReel" onclick="gerarReel()"><span id="txtReel">Gerar ideia</span></button>
-        <div id="errReel" class="ebox"></div>
-        <div id="resReel" class="rbox">
-          <div id="rrHook" class="rhook"></div>
-          <div id="rrFmt" class="rrow"><strong>Formato</strong><span></span></div>
-          <div id="rrTema" class="rrow"><strong>Tema</strong><span></span></div>
-          <div style="margin-top:12px;display:flex;gap:7px;flex-wrap:wrap;">
-            <button class="bsm bpr" onclick="salvarReel()">Salvar no banco</button>
-            <button class="bsm bgh" onclick="gerarReel()">Gerar outra</button>
-            <button class="bsm" style="background:var(--s2);color:var(--ok);border:1px solid var(--ok);" onclick="salvarGancho()">Salvar hook</button>
-          </div>
+  <div id="r-gerar" class="subview active">
+    <div class="genbox">
+      <h3>Gerar ideia de Reel</h3>
+      <p>Descreva o contexto: nicho, perfil de referência, o que quer testar</p>
+      <div class="field">
+        <label class="lbl">Contexto</label>
+        <textarea id="rCtx" placeholder="ex: social media para nutricionistas — quero testar algo parecido com @fulana, ela usa muito POV e hooks com pergunta"></textarea>
+      </div>
+      <div class="field">
+        <label class="lbl">Formato preferido</label>
+        <select id="rFmt">
+          <option value="">Qualquer formato</option>
+          <option>Talking head</option><option>POV</option><option>Tutorial</option>
+          <option>Trend/áudio</option><option>Storytelling</option><option>Bastidores</option><option>Provocação</option>
+        </select>
+      </div>
+      <button class="bmain" id="btnReel" onclick="gerarReel()"><span id="txtReel">Gerar ideia</span></button>
+      <div id="errReel" class="ebox"></div>
+      <div id="resReel" class="rbox">
+        <div id="rrHook" class="rhook"></div>
+        <div id="rrFmt" class="rrow"><strong>Formato</strong><span></span></div>
+        <div id="rrTema" class="rrow"><strong>Tema</strong><span></span></div>
+        <div style="margin-top:12px;display:flex;gap:7px;flex-wrap:wrap;">
+          <button class="bsm bpr" onclick="salvarReel()">Salvar no banco</button>
+          <button class="bsm bgh" onclick="gerarReel()">Gerar outra</button>
+          <button class="bsm" style="background:#e8fff0;color:var(--ok);border:1px solid var(--ok);" onclick="salvarGancho()">Salvar hook</button>
         </div>
       </div>
     </div>
+  </div>
+
+  <div id="r-banco" class="subview">
+    <select id="rFiltro" onchange="renderBanco()" style="width:auto;font-size:12px;padding:7px 11px;margin-bottom:12px;">
+      <option value="">Todos os formatos</option>
+      <option>Talking head</option><option>POV</option><option>Tutorial</option>
+      <option>Trend/áudio</option><option>Storytelling</option><option>Bastidores</option><option>Provocação</option>
+    </select>
     <div id="reels-grid" class="grid"></div>
   </div>
 
-  <!-- TESTES -->
-
-  <div id="rv-testes" style="display:none;">
+  <div id="r-testes" class="subview">
     <div style="max-width:640px;">
       <div class="fgrid">
-        <div class="field full">
-          <label class="lbl">Hook usado</label>
-          <input type="text" id="tHook" placeholder="O hook exato do Reel">
-        </div>
-        <div class="field">
-          <label class="lbl">Formato</label>
-          <select id="tFmt">
-            <option value="">Selecione</option>
-            <option>Talking head</option><option>POV</option><option>Tutorial</option>
-            <option>Trend/áudio</option><option>Storytelling</option><option>Bastidores</option><option>Provocação</option>
-          </select>
-        </div>
-        <div class="field">
-          <label class="lbl">Tema / contexto</label>
-          <input type="text" id="tTema" placeholder="ex: nutricionista, bastidores...">
-        </div>
-        <div class="field">
-          <label class="lbl">Alcance</label>
-          <input type="number" id="tAlc" placeholder="0" min="0">
-        </div>
-        <div class="field">
-          <label class="lbl">Novos seguidores</label>
-          <input type="number" id="tSeg" placeholder="0" min="0">
-        </div>
-        <div class="field">
-          <label class="lbl">Salvamentos</label>
-          <input type="number" id="tSalvo" placeholder="0" min="0">
-        </div>
-        <div class="field">
-          <label class="lbl">Compartilhamentos</label>
-          <input type="number" id="tComp" placeholder="0" min="0">
-        </div>
-        <div class="field full">
-          <label class="lbl">Nota (1 a 5)</label>
-          <div class="star-row" id="rStars">
-            <span class="star" onclick="setStar('r',1)">★</span><span class="star" onclick="setStar('r',2)">★</span>
-            <span class="star" onclick="setStar('r',3)">★</span><span class="star" onclick="setStar('r',4)">★</span>
-            <span class="star" onclick="setStar('r',5)">★</span>
-          </div>
-        </div>
-        <div class="field full">
-          <label class="lbl">Observação</label>
-          <textarea id="tObs" placeholder="O que você percebeu?"></textarea>
-        </div>
+        <div class="field full"><label class="lbl">Hook usado</label><input type="text" id="tHook" placeholder="O hook exato do Reel"></div>
+        <div class="field"><label class="lbl">Formato</label><select id="tFmt"><option value="">Selecione</option><option>Talking head</option><option>POV</option><option>Tutorial</option><option>Trend/áudio</option><option>Storytelling</option><option>Bastidores</option><option>Provocação</option></select></div>
+        <div class="field"><label class="lbl">Tema</label><input type="text" id="tTema" placeholder="ex: nutricionista, bastidores..."></div>
+        <div class="field"><label class="lbl">Alcance</label><input type="number" id="tAlc" placeholder="0" min="0"></div>
+        <div class="field"><label class="lbl">Novos seguidores</label><input type="number" id="tSeg" placeholder="0" min="0"></div>
+        <div class="field"><label class="lbl">Salvamentos</label><input type="number" id="tSalvo" placeholder="0" min="0"></div>
+        <div class="field"><label class="lbl">Compartilhamentos</label><input type="number" id="tComp" placeholder="0" min="0"></div>
+        <div class="field full"><label class="lbl">Nota (1 a 5)</label><div class="star-row" id="rStars"><span class="star" onclick="setStar('r',1)">★</span><span class="star" onclick="setStar('r',2)">★</span><span class="star" onclick="setStar('r',3)">★</span><span class="star" onclick="setStar('r',4)">★</span><span class="star" onclick="setStar('r',5)">★</span></div></div>
+        <div class="field full"><label class="lbl">Observação</label><textarea id="tObs" placeholder="O que você percebeu?"></textarea></div>
       </div>
       <button class="bmain" onclick="salvarTeste()">Salvar teste</button>
       <hr class="div">
       <div style="font-family:BootzyTM;font-size:16px;margin-bottom:10px;">Testes registrados</div>
-      <div style="overflow-x:auto;">
-        <table class="ttable" id="rTestesTable" style="display:none;">
-          <thead><tr><th>Hook</th><th>Formato</th><th>Alcance</th><th>Seg.</th><th>Salvo</th><th>Comp.</th><th>Nota</th><th></th></tr></thead>
-          <tbody id="rTestesBody"></tbody>
-        </table>
-      </div>
+      <div style="overflow-x:auto;"><table class="ttable" id="rTestesTable" style="display:none;"><thead><tr><th>Hook</th><th>Formato</th><th>Alcance</th><th>Seg.</th><th>Salvo</th><th>Comp.</th><th>Nota</th><th></th></tr></thead><tbody id="rTestesBody"></tbody></table></div>
       <div id="rTestesEmpty" class="empty"><div class="ei">📋</div><p>Nenhum teste ainda.</p></div>
     </div>
   </div>
 
-  <!-- ANÁLISE REELS -->
-
-  <div id="rv-analise" style="display:none;">
+  <div id="r-analise" class="subview">
     <div id="rAnaliseEmpty" class="empty"><div class="ei">📊</div><p>Registre pelo menos 3 testes para ver a análise.</p></div>
-    <div id="rAnaliseContent">
+    <div id="rAnaliseContent" style="display:none;">
       <div class="sgrid" id="rStats"></div>
       <div class="asec"><h3>Formato que mais traz seguidores</h3><div id="rChartSeg"></div></div>
       <div class="asec"><h3>Formato com maior alcance médio</h3><div id="rChartAlc"></div></div>
@@ -305,119 +228,59 @@ hr.div { border: none; border-top: 1px solid var(–border); margin: 20px 0; }
   </div>
 </div>
 
-<!-- ══════════════════════════════════════
-     CARROSSÉIS
-══════════════════════════════════════ -->
+<!-- CARROSSÉIS -->
 
 <div id="sec-carrossel" class="sec">
   <div class="shead">
-    <div>
-      <div class="stitle">Carrosséis</div>
-      <div class="ssub">Registre e analise o desempenho dos seus carrosséis</div>
-    </div>
-    <select id="cVista" onchange="renderCarrossel()" style="width:auto;font-size:12px;padding:7px 11px;">
+    <div><div class="stitle">Carrosséis</div><div class="ssub">Registre e analise o desempenho dos seus carrosséis</div></div>
+    <select id="cVista" onchange="goSubview('c',this.value)" style="width:auto;font-size:12px;padding:7px 11px;">
       <option value="testes">Registrar teste</option>
       <option value="analise">Análise</option>
     </select>
   </div>
 
-  <!-- TESTES CARROSSEL -->
-
-  <div id="cv-testes">
+  <div id="c-testes" class="subview active">
     <div style="max-width:640px;">
       <div class="fgrid">
-        <div class="field full">
-          <label class="lbl">Título / tema do carrossel</label>
-          <input type="text" id="cTitulo" placeholder="ex: 3 erros que afastam seguidores">
-        </div>
-        <div class="field full">
-          <label class="lbl">Contexto (nicho, cliente, objetivo)</label>
-          <input type="text" id="cCtx" placeholder="ex: nutricionista funcional, objetivo atrair pacientes">
-        </div>
-        <div class="field">
-          <label class="lbl">Alcance</label>
-          <input type="number" id="cAlc" placeholder="0" min="0">
-        </div>
-        <div class="field">
-          <label class="lbl">Novos seguidores</label>
-          <input type="number" id="cSeg" placeholder="0" min="0">
-        </div>
-        <div class="field">
-          <label class="lbl">Salvamentos</label>
-          <input type="number" id="cSalvo" placeholder="0" min="0">
-        </div>
-        <div class="field">
-          <label class="lbl">Compartilhamentos</label>
-          <input type="number" id="cComp" placeholder="0" min="0">
-        </div>
-        <div class="field full">
-          <label class="lbl">Nota (1 a 5)</label>
-          <div class="star-row" id="cStars">
-            <span class="star" onclick="setStar('c',1)">★</span><span class="star" onclick="setStar('c',2)">★</span>
-            <span class="star" onclick="setStar('c',3)">★</span><span class="star" onclick="setStar('c',4)">★</span>
-            <span class="star" onclick="setStar('c',5)">★</span>
-          </div>
-        </div>
-        <div class="field full">
-          <label class="lbl">O que funcionou / não funcionou</label>
-          <textarea id="cObs" placeholder="ex: capa com número de slides converteu mais, segundo slide perdeu atenção..."></textarea>
-        </div>
+        <div class="field full"><label class="lbl">Título / tema do carrossel</label><input type="text" id="cTitulo" placeholder="ex: 3 erros que afastam seguidores"></div>
+        <div class="field full"><label class="lbl">Contexto (nicho, cliente)</label><input type="text" id="cCtx" placeholder="ex: nutricionista funcional"></div>
+        <div class="field"><label class="lbl">Alcance</label><input type="number" id="cAlc" placeholder="0" min="0"></div>
+        <div class="field"><label class="lbl">Novos seguidores</label><input type="number" id="cSeg" placeholder="0" min="0"></div>
+        <div class="field"><label class="lbl">Salvamentos</label><input type="number" id="cSalvo" placeholder="0" min="0"></div>
+        <div class="field"><label class="lbl">Compartilhamentos</label><input type="number" id="cComp" placeholder="0" min="0"></div>
+        <div class="field full"><label class="lbl">Nota (1 a 5)</label><div class="star-row" id="cStars"><span class="star" onclick="setStar('c',1)">★</span><span class="star" onclick="setStar('c',2)">★</span><span class="star" onclick="setStar('c',3)">★</span><span class="star" onclick="setStar('c',4)">★</span><span class="star" onclick="setStar('c',5)">★</span></div></div>
+        <div class="field full"><label class="lbl">Observação</label><textarea id="cObs" placeholder="O que funcionou / não funcionou?"></textarea></div>
       </div>
       <button class="bmain" onclick="salvarCarrossel()">Salvar teste</button>
       <hr class="div">
-      <div style="font-family:BootzyTM;font-size:16px;margin-bottom:10px;">Testes registrados</div>
-      <div style="overflow-x:auto;">
-        <table class="ttable" id="cTestesTable" style="display:none;">
-          <thead><tr><th>Título</th><th>Contexto</th><th>Alcance</th><th>Seg.</th><th>Salvo</th><th>Comp.</th><th>Nota</th><th></th></tr></thead>
-          <tbody id="cTestesBody"></tbody>
-        </table>
-      </div>
+      <div style="font-family:BootzyTM;font-size:16px;margin-bottom:10px;">Carrosséis registrados</div>
+      <div style="overflow-x:auto;"><table class="ttable" id="cTestesTable" style="display:none;"><thead><tr><th>Título</th><th>Contexto</th><th>Alcance</th><th>Seg.</th><th>Salvo</th><th>Comp.</th><th>Nota</th><th></th></tr></thead><tbody id="cTestesBody"></tbody></table></div>
       <div id="cTestesEmpty" class="empty"><div class="ei">📱</div><p>Nenhum carrossel registrado ainda.</p></div>
     </div>
   </div>
 
-  <!-- ANÁLISE CARROSSEL -->
-
-  <div id="cv-analise" style="display:none;">
+  <div id="c-analise" class="subview">
     <div id="cAnaliseEmpty" class="empty"><div class="ei">📊</div><p>Registre pelo menos 3 carrosséis para ver a análise.</p></div>
-    <div id="cAnaliseContent">
+    <div id="cAnaliseContent" style="display:none;">
       <div class="sgrid" id="cStats"></div>
-      <div class="asec"><h3>Carrosséis que mais trouxeram seguidores</h3><div id="cChartSeg"></div></div>
-      <div class="asec"><h3>Carrosséis com mais salvamentos</h3><div id="cChartSalvo"></div></div>
+      <div class="asec"><h3>Que mais trouxeram seguidores</h3><div id="cChartSeg"></div></div>
+      <div class="asec"><h3>Com mais salvamentos</h3><div id="cChartSalvo"></div></div>
       <div class="asec"><h3>Top 3 por alcance</h3><div id="cTop"></div></div>
     </div>
   </div>
 </div>
 
-<!-- ══════════════════════════════════════
-     STORIES DE ROTINA
-══════════════════════════════════════ -->
+<!-- STORIES -->
 
 <div id="sec-stories" class="sec">
   <div class="stitle" style="margin-bottom:3px;">Stories de Rotina</div>
-  <div class="ssub">Jogue a rotina do dia e a IA transforma em pauta de stories</div>
-
+  <div class="ssub">Descreva o que aconteceu e a IA transforma em pauta de stories</div>
   <div class="genbox" style="max-width:660px;">
     <h3>Transformar rotina em stories</h3>
-    <p>Descreva o que aconteceu hoje, o nicho e o objetivo dos stories</p>
-    <div class="field">
-      <label class="lbl">Rotina / acontecimentos do dia</label>
-      <textarea id="sRotina" style="min-height:110px;" placeholder="ex: hoje atendi 3 clientes novos, fiz reunião de briefing, tive dificuldade com aprovação de post, tomei café com cliente que fechou pacote anual..."></textarea>
-    </div>
-    <div class="field">
-      <label class="lbl">Nicho / contexto (seu perfil ou de uma cliente)</label>
-      <input type="text" id="sNicho" placeholder="ex: social media estratégica, nutricionista funcional, dentista...">
-    </div>
-    <div class="field">
-      <label class="lbl">Objetivo dos stories</label>
-      <select id="sObj">
-        <option value="conexão">Conexão e bastidores</option>
-        <option value="autoridade">Autoridade e prova social</option>
-        <option value="venda">Venda indireta</option>
-        <option value="engajamento">Engajamento (caixinhas, perguntas)</option>
-        <option value="misto">Mistura de tudo</option>
-      </select>
-    </div>
+    <p>Quanto mais detalhar, melhor a pauta gerada</p>
+    <div class="field"><label class="lbl">O que aconteceu hoje</label><textarea id="sRotina" style="min-height:110px;" placeholder="ex: atendi 3 clientes novos, fiz reunião de briefing, tive dificuldade com aprovação de post, fechei um pacote anual..."></textarea></div>
+    <div class="field"><label class="lbl">Nicho / contexto</label><input type="text" id="sNicho" placeholder="ex: social media estratégica, nutricionista, dentista..."></div>
+    <div class="field"><label class="lbl">Objetivo dos stories</label><select id="sObj"><option value="conexão">Conexão e bastidores</option><option value="autoridade">Autoridade e prova social</option><option value="venda">Venda indireta</option><option value="engajamento">Engajamento (caixinhas, perguntas)</option><option value="misto">Mistura de tudo</option></select></div>
     <button class="bmain" id="btnStories" onclick="gerarStories()"><span id="txtStories">Transformar em stories</span></button>
     <div id="errStories" class="ebox"></div>
     <div id="resStories" class="stories-out">
@@ -431,101 +294,45 @@ hr.div { border: none; border-top: 1px solid var(–border); margin: 20px 0; }
   </div>
 </div>
 
-<!-- ══════════════════════════════════════
-     BANCO DE GANCHOS
-══════════════════════════════════════ -->
+<!-- GANCHOS -->
 
 <div id="sec-ganchos" class="sec">
   <div class="shead">
-    <div>
-      <div class="stitle">Banco de Ganchos</div>
-      <div class="ssub">Hooks que funcionaram, organizados por categoria</div>
-    </div>
-    <button class="bmain bout" onclick="abrirAddGancho()" style="font-size:12px;padding:8px 14px;">+ Adicionar</button>
+    <div><div class="stitle">Banco de Ganchos</div><div class="ssub">Hooks que funcionaram, organizados por categoria</div></div>
+    <button class="bmain bout" onclick="toggleAddGancho()" style="font-size:12px;padding:8px 14px;">+ Adicionar</button>
   </div>
-
-  <!-- ADD GANCHO -->
-
   <div id="addGanchoBox" style="display:none;max-width:540px;margin-bottom:20px;">
     <div class="genbox">
-      <h3>Adicionar gancho manualmente</h3>
-      <p>Salve um hook que funcionou bem em qualquer formato</p>
-      <div class="field">
-        <label class="lbl">Hook</label>
-        <input type="text" id="gHook" placeholder="ex: Para de postar igual todo mundo do seu nicho">
-      </div>
-      <div class="field">
-        <label class="lbl">Categoria</label>
-        <select id="gCat">
-          <option value="provocação">Provocação</option>
-          <option value="bastidores">Bastidores</option>
-          <option value="autoridade">Autoridade</option>
-          <option value="identificação">Identificação</option>
-          <option value="curiosidade">Curiosidade</option>
-          <option value="resultado">Resultado / case</option>
-          <option value="outro">Outro</option>
-        </select>
-      </div>
-      <div class="field">
-        <label class="lbl">Contexto (opcional)</label>
-        <input type="text" id="gCtx" placeholder="ex: funcionou num reel de teste para nutricionista">
-      </div>
-      <div style="display:flex;gap:8px;">
-        <button class="bmain" onclick="addGanchoManual()" style="font-size:13px;padding:9px 20px;">Salvar</button>
-        <button class="bsm bgh" onclick="fecharAddGancho()">Cancelar</button>
-      </div>
+      <h3>Adicionar gancho</h3>
+      <div class="field"><label class="lbl">Hook</label><input type="text" id="gHook" placeholder="ex: Para de postar igual todo mundo do seu nicho"></div>
+      <div class="field"><label class="lbl">Categoria</label><select id="gCat"><option value="provocação">Provocação</option><option value="bastidores">Bastidores</option><option value="autoridade">Autoridade</option><option value="identificação">Identificação</option><option value="curiosidade">Curiosidade</option><option value="resultado">Resultado / case</option><option value="outro">Outro</option></select></div>
+      <div class="field"><label class="lbl">Contexto (opcional)</label><input type="text" id="gCtx" placeholder="ex: funcionou num reel de nutricionista"></div>
+      <div style="display:flex;gap:8px;"><button class="bmain" onclick="addGancho()" style="font-size:13px;padding:9px 20px;">Salvar</button><button class="bsm bgh" onclick="toggleAddGancho()">Cancelar</button></div>
     </div>
   </div>
-
-  <!-- FILTRO CATEGORIA -->
-
-  <div style="margin-bottom:14px;">
-    <select id="gFiltro" onchange="renderGanchos()" style="width:auto;font-size:12px;padding:7px 11px;">
-      <option value="">Todas as categorias</option>
-      <option value="provocação">Provocação</option>
-      <option value="bastidores">Bastidores</option>
-      <option value="autoridade">Autoridade</option>
-      <option value="identificação">Identificação</option>
-      <option value="curiosidade">Curiosidade</option>
-      <option value="resultado">Resultado / case</option>
-      <option value="outro">Outro</option>
-    </select>
-  </div>
-
+  <select id="gFiltro" onchange="renderGanchos()" style="width:auto;font-size:12px;padding:7px 11px;margin-bottom:14px;">
+    <option value="">Todas as categorias</option>
+    <option value="provocação">Provocação</option><option value="bastidores">Bastidores</option><option value="autoridade">Autoridade</option><option value="identificação">Identificação</option><option value="curiosidade">Curiosidade</option><option value="resultado">Resultado / case</option><option value="outro">Outro</option>
+  </select>
   <div id="ganchosList"></div>
 </div>
 
-<!-- ══════════════════════════════════════
-     ANÁLISE DE CONCORRENTE
-══════════════════════════════════════ -->
+<!-- CONCORRENTE -->
 
 <div id="sec-concorrente" class="sec">
   <div class="stitle" style="margin-bottom:3px;">Análise de Concorrente</div>
   <div class="ssub">Descreva um perfil e a IA aponta o que está funcionando e como adaptar</div>
-
   <div class="genbox" style="max-width:660px;">
     <h3>Analisar perfil</h3>
-    <p>Quanto mais detalhes você der, melhor a análise</p>
-    <div class="field">
-      <label class="lbl">@ ou descrição do perfil</label>
-      <input type="text" id="cpPerfil" placeholder="ex: @nutricionistaxyz ou social media de esteticista em SP">
-    </div>
-    <div class="field">
-      <label class="lbl">O que você observou nesse perfil?</label>
-      <textarea id="cpObs" style="min-height:100px;" placeholder="ex: posta todo dia, usa muito reels de bastidores, hooks sempre com pergunta, carrosséis com título provocador, alto engajamento nos salvamentos, stories de caixinha todo dia..."></textarea>
-    </div>
-    <div class="field">
-      <label class="lbl">Para qual nicho / cliente quer adaptar?</label>
-      <input type="text" id="cpNicho" placeholder="ex: minha cliente dentista, meu próprio perfil de social media...">
-    </div>
-    <button class="bmain" id="btnConc" onclick="analisarConcorrente()"><span id="txtConc">Analisar e adaptar</span></button>
+    <div class="field"><label class="lbl">@ ou descrição do perfil</label><input type="text" id="cpPerfil" placeholder="ex: @fulana ou social media de esteticista em SP"></div>
+    <div class="field"><label class="lbl">O que você observou nesse perfil?</label><textarea id="cpObs" style="min-height:100px;" placeholder="ex: posta todo dia, muito reel de bastidores, hooks com pergunta, alto salvamento em carrosséis..."></textarea></div>
+    <div class="field"><label class="lbl">Para qual nicho quer adaptar?</label><input type="text" id="cpNicho" placeholder="ex: minha cliente dentista, meu próprio perfil..."></div>
+    <button class="bmain" id="btnConc" onclick="analisarConc()"><span id="txtConc">Analisar e adaptar</span></button>
     <div id="errConc" class="ebox"></div>
     <div id="resConc" class="conc-out">
       <div style="font-family:BootzyTM;font-size:15px;margin-bottom:14px;color:#7c4dcc;">Análise do perfil</div>
       <div id="concList"></div>
-      <div style="margin-top:14px;">
-        <button class="bsm" style="background:#f0e8ff;color:#7c4dcc;border:1px solid #7c4dcc;" onclick="analisarConcorrente()">Analisar outro ângulo</button>
-      </div>
+      <div style="margin-top:14px;"><button class="bsm" style="background:#f0e8ff;color:#7c4dcc;border:1px solid #7c4dcc;" onclick="analisarConc()">Outro ângulo</button></div>
     </div>
   </div>
 </div>
@@ -533,23 +340,11 @@ hr.div { border: none; border-top: 1px solid var(–border); margin: 20px 0; }
 <div id="toast"></div>
 
 <script>
-// ══ STORAGE ══
+// STORAGE
 const ld = k => { try { return JSON.parse(localStorage.getItem(k)||"[]"); } catch { return []; } };
 const sv = (k,v) => localStorage.setItem(k, JSON.stringify(v));
 
-// ══ TABS ══
-const TABS = ["reels","carrossel","stories","ganchos","concorrente"];
-function go(tab) {
-  TABS.forEach(t => {
-    document.getElementById("sec-"+t).classList.toggle("active", t===tab);
-  });
-  document.querySelectorAll(".tab").forEach((el,i) => el.classList.toggle("active", TABS[i]===tab));
-  if(tab==="reels") renderReels();
-  if(tab==="carrossel") renderCarrossel();
-  if(tab==="ganchos") renderGanchos();
-}
-
-// ══ TOAST ══
+// TOAST
 function toast(msg) {
   const t = document.getElementById("toast");
   t.textContent = msg;
@@ -557,20 +352,42 @@ function toast(msg) {
   setTimeout(() => t.classList.remove("show"), 2600);
 }
 
-// ══ STARS ══
-const stars = { r:0, c:0 };
-function setStar(type, n) {
-  stars[type] = n;
-  document.querySelectorAll(`#${type}Stars .star`).forEach((s,i) => s.classList.toggle("active", i<n));
+// TABS PRINCIPAIS
+const TABS = ["reels","carrossel","stories","ganchos","concorrente"];
+function goTab(tab) {
+  TABS.forEach(t => document.getElementById("sec-"+t).classList.toggle("active", t===tab));
+  document.querySelectorAll(".tab").forEach((el,i) => el.classList.toggle("active", TABS[i]===tab));
+  if(tab==="ganchos") renderGanchos();
 }
 
-// ══ LOADING ══
+// SUBVIEWS
+function goSubview(prefix, view) {
+  const sec = document.getElementById("sec-"+(prefix==="r"?"reels":"carrossel"));
+  sec.querySelectorAll(".subview").forEach(el => {
+    const id = el.id;
+    el.classList.toggle("active", id === prefix+"-"+view);
+  });
+  if(view==="banco") renderBanco();
+  if(view==="testes" && prefix==="r") renderTestesReels();
+  if(view==="testes" && prefix==="c") renderTestesCarrossel();
+  if(view==="analise" && prefix==="r") renderAnaliseReels();
+  if(view==="analise" && prefix==="c") renderAnaliseCarrossel();
+}
+
+// STARS
+const stars = {r:0, c:0};
+function setStar(type, n) {
+  stars[type] = n;
+  document.querySelectorAll("#"+type+"Stars .star").forEach((s,i) => s.classList.toggle("active", i<n));
+}
+
+// LOADING
 function setLoad(btnId, txtId, on, def) {
   document.getElementById(btnId).disabled = on;
   document.getElementById(txtId).innerHTML = on ? '<span class="spinner"></span> Gerando...' : def;
 }
 
-// ══ API ══
+// API
 async function callAI(prompt, system) {
   const res = await fetch("/generate", {
     method: "POST",
@@ -582,66 +399,25 @@ async function callAI(prompt, system) {
   return data;
 }
 
-// ══════════════════
-// REELS
-// ══════════════════
-function renderReels() {
-  const vista = document.getElementById("rVista").value;
-  document.getElementById("rv-banco").style.display = vista==="banco" ? "block" : "none";
-  document.getElementById("rv-testes").style.display = vista==="testes" ? "block" : "none";
-  document.getElementById("rv-analise").style.display = vista==="analise" ? "block" : "none";
-  if(vista==="banco") renderBancoReels();
-  if(vista==="testes") renderTestesReels();
-  if(vista==="analise") renderAnaliseReels();
-}
-
-function renderBancoReels() {
-  const ideas = ld("rl_ideas");
-  const fmt = document.getElementById("rFiltro").value;
-  const filtered = fmt ? ideas.filter(i=>i.formato===fmt) : ideas;
-  const grid = document.getElementById("reels-grid");
-  if (!filtered.length) {
-    grid.innerHTML = `<div class="empty" style="grid-column:1/-1"><div class="ei">💡</div><p>Nenhuma ideia ainda.<br>Use o gerador acima.</p></div>`;
-    return;
-  }
-  grid.innerHTML = filtered.map(idea => {
-    const idx = ideas.indexOf(idea);
-    return `<div class="card">
-      <span class="ctag ${idea.origem==="ref"?"ctag-ref":"ctag-ia"}">${idea.origem==="ref"?"📱 Referência":"✨ IA"}</span>
-      <div class="chook">"${idea.hook}"</div>
-      <div class="cmeta">
-        <span class="cpill">🎬 ${idea.formato||"—"}</span>
-        <span class="cpill">🏷 ${idea.tema||"—"}</span>
-      </div>
-      <div class="cact">
-        <button class="bsm bpr" onclick="usarReel(${idx})">Usar no teste</button>
-        <button class="bsm bdn" onclick="delReel(${idx})">Remover</button>
-      </div>
-    </div>`;
-  }).join("");
-}
-
+// GERAR REEL
 let lastReel = null;
 async function gerarReel() {
   const ctx = document.getElementById("rCtx").value.trim();
   const fmt = document.getElementById("rFmt").value;
   const err = document.getElementById("errReel");
   err.classList.remove("show");
-  setLoad("btnReel","txtReel", true, "Gerar ideia");
-
-  const prompt = `Gere UMA ideia de Reel de teste para Instagram.
-Contexto fornecido: ${ctx || "social media estratégica que atende empreendedoras"}
-${fmt ? "Formato desejado: "+fmt : "Escolha o melhor formato para alcance e captação de seguidores qualificados."}
-Objetivo: parar o scroll e ganhar seguidores qualificados. Não precisa ser o estilo do perfil principal.
-O hook deve ser direto, provocador, máximo 12 palavras, sem travessão.
-Responda APENAS em JSON: {"hook":"...","formato":"...","tema":"..."}`;
-
-  const sys = `Você é especialista em estratégia de Reels para Instagram focado em crescimento de seguidores qualificados.
-Responda APENAS em JSON puro sem markdown sem backticks.`;
-
+  setLoad("btnReel","txtReel",true,"Gerar ideia");
   try {
-    const r = await callAI(prompt, sys);
-    lastReel = { ...r, origem: ctx.includes("@") ? "ref" : "ia" };
+    const r = await callAI(
+      `Gere UMA ideia de Reel de teste para Instagram.
+Contexto: ${ctx||"social media estratégica que atende empreendedoras"}
+${fmt?"Formato: "+fmt:"Escolha o melhor formato."}
+Objetivo: parar o scroll e ganhar seguidores qualificados.
+Hook direto, máximo 12 palavras, sem travessão.
+JSON: {"hook":"...","formato":"...","tema":"..."}`,
+      "Você é especialista em Reels para Instagram. Responda APENAS em JSON puro sem markdown."
+    );
+    lastReel = {...r, origem: ctx.includes("@")?"ref":"ia"};
     document.getElementById("rrHook").textContent = `"${r.hook}"`;
     document.getElementById("rrFmt").querySelector("span").textContent = r.formato;
     document.getElementById("rrTema").querySelector("span").textContent = r.tema;
@@ -650,30 +426,42 @@ Responda APENAS em JSON puro sem markdown sem backticks.`;
     err.textContent = "Erro: "+e.message;
     err.classList.add("show");
   }
-  setLoad("btnReel","txtReel", false, "Gerar outra");
+  setLoad("btnReel","txtReel",false,"Gerar outra");
 }
 
 function salvarReel() {
-  if (!lastReel) return;
+  if(!lastReel) return;
   const ideas = ld("rl_ideas");
-  ideas.unshift({ ...lastReel, id: Date.now() });
+  ideas.unshift({...lastReel, id: Date.now()});
   sv("rl_ideas", ideas);
   toast("Ideia salva no banco! 🎉");
-  renderBancoReels();
 }
 
 function salvarGancho() {
-  if (!lastReel?.hook) return;
-  const ganchos = ld("rl_ganchos");
-  ganchos.unshift({ id: Date.now(), hook: lastReel.hook, cat: "outro", ctx: lastReel.tema || "" });
-  sv("rl_ganchos", ganchos);
-  toast("Hook salvo no banco de ganchos! 🪝");
+  if(!lastReel?.hook) return;
+  const g = ld("rl_ganchos");
+  g.unshift({id:Date.now(), hook:lastReel.hook, cat:"outro", ctx:lastReel.tema||""});
+  sv("rl_ganchos", g);
+  toast("Hook salvo! 🪝");
+}
+
+// BANCO
+function renderBanco() {
+  const ideas = ld("rl_ideas");
+  const fmt = document.getElementById("rFiltro").value;
+  const filtered = fmt ? ideas.filter(i=>i.formato===fmt) : ideas;
+  const grid = document.getElementById("reels-grid");
+  if(!filtered.length) { grid.innerHTML=`<div class="empty" style="grid-column:1/-1"><div class="ei">💡</div><p>Nenhuma ideia ainda.</p></div>`; return; }
+  grid.innerHTML = filtered.map(idea => {
+    const idx = ideas.indexOf(idea);
+    return `<div class="card"><span class="ctag ${idea.origem==="ref"?"ctag-ref":"ctag-ia"}">${idea.origem==="ref"?"📱 Ref":"✨ IA"}</span><div class="chook">"${idea.hook}"</div><div class="cmeta"><span class="cpill">🎬 ${idea.formato||"—"}</span><span class="cpill">🏷 ${idea.tema||"—"}</span></div><div class="cact"><button class="bsm bpr" onclick="usarReel(${idx})">Usar no teste</button><button class="bsm bdn" onclick="delReel(${idx})">Remover</button></div></div>`;
+  }).join("");
 }
 
 function usarReel(idx) {
   const idea = ld("rl_ideas")[idx];
   document.getElementById("rVista").value = "testes";
-  renderReels();
+  goSubview("r","testes");
   setTimeout(() => {
     document.getElementById("tHook").value = idea.hook;
     if(idea.formato) document.getElementById("tFmt").value = idea.formato;
@@ -683,234 +471,88 @@ function usarReel(idx) {
 }
 
 function delReel(idx) {
-  const ideas = ld("rl_ideas");
-  ideas.splice(idx,1);
-  sv("rl_ideas", ideas);
-  renderBancoReels();
-  toast("Removida");
+  const ideas = ld("rl_ideas"); ideas.splice(idx,1); sv("rl_ideas",ideas); renderBanco(); toast("Removida");
 }
 
+// TESTES REELS
 function salvarTeste() {
   const hook = document.getElementById("tHook").value.trim();
-  if (!hook) { toast("Preencha o hook"); return; }
-  if (!stars.r) { toast("Dê uma nota de 1 a 5"); return; }
+  if(!hook) { toast("Preencha o hook"); return; }
+  if(!stars.r) { toast("Dê uma nota de 1 a 5"); return; }
   const tests = ld("rl_tests");
-  tests.unshift({
-    id: Date.now(),
-    hook,
-    formato: document.getElementById("tFmt").value,
-    tema: document.getElementById("tTema").value,
-    alcance: parseInt(document.getElementById("tAlc").value)||0,
-    seguidores: parseInt(document.getElementById("tSeg").value)||0,
-    salvo: parseInt(document.getElementById("tSalvo").value)||0,
-    comp: parseInt(document.getElementById("tComp").value)||0,
-    nota: stars.r,
-    obs: document.getElementById("tObs").value,
-    data: new Date().toLocaleDateString("pt-BR")
-  });
-  sv("rl_tests", tests);
-  ["tHook","tTema","tAlc","tSeg","tSalvo","tComp","tObs"].forEach(id => document.getElementById(id).value="");
-  document.getElementById("tFmt").value="";
-  setStar("r",0); stars.r=0;
-  toast("Teste salvo! 🎉");
-  renderTestesReels();
+  tests.unshift({id:Date.now(),hook,formato:document.getElementById("tFmt").value,tema:document.getElementById("tTema").value,alcance:parseInt(document.getElementById("tAlc").value)||0,seguidores:parseInt(document.getElementById("tSeg").value)||0,salvo:parseInt(document.getElementById("tSalvo").value)||0,comp:parseInt(document.getElementById("tComp").value)||0,nota:stars.r,obs:document.getElementById("tObs").value,data:new Date().toLocaleDateString("pt-BR")});
+  sv("rl_tests",tests);
+  ["tHook","tTema","tAlc","tSeg","tSalvo","tComp","tObs"].forEach(id=>document.getElementById(id).value="");
+  document.getElementById("tFmt").value=""; setStar("r",0); stars.r=0;
+  toast("Teste salvo! 🎉"); renderTestesReels();
 }
 
 function renderTestesReels() {
   const tests = ld("rl_tests");
-  const tbody = document.getElementById("rTestesBody");
   const empty = document.getElementById("rTestesEmpty");
   const table = document.getElementById("rTestesTable");
-  if (!tests.length) { table.style.display="none"; empty.style.display="block"; return; }
+  if(!tests.length) { table.style.display="none"; empty.style.display="block"; return; }
   table.style.display="table"; empty.style.display="none";
-  tbody.innerHTML = tests.map(t=>`
-    <tr>
-      <td style="max-width:160px;"><span title="${t.hook}" style="display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-style:italic">"${t.hook}"</span><span style="font-size:10px;color:var(--muted)">${t.data||""}</span></td>
-      <td>${t.formato||"—"}</td>
-      <td>${t.alcance.toLocaleString("pt-BR")}</td>
-      <td style="color:var(--ok);font-weight:600">+${t.seguidores}</td>
-      <td>${t.salvo}</td>
-      <td>${t.comp}</td>
-      <td><span class="stars-d">${"★".repeat(t.nota)}${"☆".repeat(5-t.nota)}</span></td>
-      <td><button class="bsm bdn" onclick="delTeste(${t.id})">×</button></td>
-    </tr>`).join("");
+  document.getElementById("rTestesBody").innerHTML = tests.map(t=>`<tr><td style="max-width:160px;"><span title="${t.hook}" style="display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-style:italic">"${t.hook}"</span><span style="font-size:10px;color:var(--muted)">${t.data||""}</span></td><td>${t.formato||"—"}</td><td>${t.alcance.toLocaleString("pt-BR")}</td><td style="color:var(--ok);font-weight:600">+${t.seguidores}</td><td>${t.salvo}</td><td>${t.comp}</td><td><span class="stars-d">${"★".repeat(t.nota)}${"☆".repeat(5-t.nota)}</span></td><td><button class="bsm bdn" onclick="delTeste(${t.id})">×</button></td></tr>`).join("");
 }
 
-function delTeste(id) {
-  sv("rl_tests", ld("rl_tests").filter(t=>t.id!==id));
-  renderTestesReels();
-  toast("Removido");
-}
+function delTeste(id) { sv("rl_tests",ld("rl_tests").filter(t=>t.id!==id)); renderTestesReels(); toast("Removido"); }
 
+// ANÁLISE REELS
 function renderAnaliseReels() {
   const tests = ld("rl_tests");
   const empty = document.getElementById("rAnaliseEmpty");
   const content = document.getElementById("rAnaliseContent");
-  if (tests.length < 3) { empty.style.display="block"; content.style.display="none"; return; }
+  if(tests.length<3) { empty.style.display="block"; content.style.display="none"; return; }
   empty.style.display="none"; content.style.display="block";
-
-  const totalAlc = tests.reduce((a,t)=>a+t.alcance,0);
-  const totalSeg = tests.reduce((a,t)=>a+t.seguidores,0);
-  const mediaNota = (tests.reduce((a,t)=>a+t.nota,0)/tests.length).toFixed(1);
-
-  document.getElementById("rStats").innerHTML = `
-    <div class="scard"><div class="snum">${tests.length}</div><div class="slbl">Testes</div></div>
-    <div class="scard"><div class="snum">${Math.round(totalAlc/tests.length).toLocaleString("pt-BR")}</div><div class="slbl">Alcance médio</div></div>
-    <div class="scard"><div class="snum">+${totalSeg}</div><div class="slbl">Seguidores</div></div>
-    <div class="scard"><div class="snum">${mediaNota}</div><div class="slbl">Nota média</div></div>`;
-
-  const fmts = {};
-  tests.forEach(t => {
-    if (!t.formato) return;
-    if (!fmts[t.formato]) fmts[t.formato]={seg:0,alc:0,n:0};
-    fmts[t.formato].seg+=t.seguidores; fmts[t.formato].alc+=t.alcance; fmts[t.formato].n++;
-  });
-
-  const bySeg = Object.entries(fmts).sort((a,b)=>b[1].seg-a[1].seg);
-  const maxS = Math.max(...bySeg.map(f=>f[1].seg))||1;
-  document.getElementById("rChartSeg").innerHTML = bySeg.map(([f,d])=>
-    `<div class="brow"><div class="blbl">${f}</div><div class="btrk"><div class="bfil" style="width:${Math.round(d.seg/maxS*100)}%"></div></div><div class="bval">+${d.seg}</div></div>`
-  ).join("") || `<p style="color:var(--muted);font-size:13px">Adicione formatos nos testes.</p>`;
-
-  const byAlc = Object.entries(fmts).sort((a,b)=>(b[1].alc/b[1].n)-(a[1].alc/a[1].n));
-  const maxA = Math.max(...byAlc.map(f=>Math.round(f[1].alc/f[1].n)))||1;
-  document.getElementById("rChartAlc").innerHTML = byAlc.map(([f,d])=>{
-    const m=Math.round(d.alc/d.n);
-    return `<div class="brow"><div class="blbl">${f}</div><div class="btrk"><div class="bfil" style="width:${Math.round(m/maxA*100)}%"></div></div><div class="bval">${m.toLocaleString("pt-BR")}</div></div>`;
-  }).join("") || `<p style="color:var(--muted);font-size:13px">Adicione formatos nos testes.</p>`;
-
-  document.getElementById("rTop").innerHTML = [...tests].sort((a,b)=>b.alcance-a.alcance).slice(0,3).map((t,i)=>`
-    <div class="top-card">
-      <div class="top-n">${i+1}</div>
-      <div style="flex:1">
-        <div style="font-style:italic;margin-bottom:7px;font-size:13px">"${t.hook}"</div>
-        <div style="display:flex;gap:6px;flex-wrap:wrap">
-          <span class="badge bg">📡 ${t.alcance.toLocaleString("pt-BR")}</span>
-          <span class="badge bgn">+${t.seguidores} seg</span>
-          ${t.formato?`<span class="badge" style="background:var(--s2);color:var(--muted)">${t.formato}</span>`:""}
-          <span class="stars-d" style="font-size:11px">${"★".repeat(t.nota)}</span>
-        </div>
-      </div>
-    </div>`).join("");
+  document.getElementById("rStats").innerHTML = `<div class="scard"><div class="snum">${tests.length}</div><div class="slbl">Testes</div></div><div class="scard"><div class="snum">${Math.round(tests.reduce((a,t)=>a+t.alcance,0)/tests.length).toLocaleString("pt-BR")}</div><div class="slbl">Alcance médio</div></div><div class="scard"><div class="snum">+${tests.reduce((a,t)=>a+t.seguidores,0)}</div><div class="slbl">Seguidores</div></div><div class="scard"><div class="snum">${(tests.reduce((a,t)=>a+t.nota,0)/tests.length).toFixed(1)}</div><div class="slbl">Nota média</div></div>`;
+  const fmts={};
+  tests.forEach(t=>{ if(!t.formato) return; if(!fmts[t.formato]) fmts[t.formato]={seg:0,alc:0,n:0}; fmts[t.formato].seg+=t.seguidores; fmts[t.formato].alc+=t.alcance; fmts[t.formato].n++; });
+  const bySeg=Object.entries(fmts).sort((a,b)=>b[1].seg-a[1].seg); const maxS=Math.max(...bySeg.map(f=>f[1].seg))||1;
+  document.getElementById("rChartSeg").innerHTML = bySeg.map(([f,d])=>`<div class="brow"><div class="blbl">${f}</div><div class="btrk"><div class="bfil" style="width:${Math.round(d.seg/maxS*100)}%"></div></div><div class="bval">+${d.seg}</div></div>`).join("")||`<p style="color:var(--muted);font-size:13px">Sem dados.</p>`;
+  const byAlc=Object.entries(fmts).sort((a,b)=>(b[1].alc/b[1].n)-(a[1].alc/a[1].n)); const maxA=Math.max(...byAlc.map(f=>Math.round(f[1].alc/f[1].n)))||1;
+  document.getElementById("rChartAlc").innerHTML = byAlc.map(([f,d])=>{ const m=Math.round(d.alc/d.n); return `<div class="brow"><div class="blbl">${f}</div><div class="btrk"><div class="bfil" style="width:${Math.round(m/maxA*100)}%"></div></div><div class="bval">${m.toLocaleString("pt-BR")}</div></div>`; }).join("")||`<p style="color:var(--muted);font-size:13px">Sem dados.</p>`;
+  document.getElementById("rTop").innerHTML = [...tests].sort((a,b)=>b.alcance-a.alcance).slice(0,3).map((t,i)=>`<div class="top-card"><div class="top-n">${i+1}</div><div style="flex:1"><div style="font-style:italic;margin-bottom:7px;font-size:13px">"${t.hook}"</div><div style="display:flex;gap:6px;flex-wrap:wrap"><span class="badge bg">📡 ${t.alcance.toLocaleString("pt-BR")}</span><span class="badge bgn">+${t.seguidores} seg</span>${t.formato?`<span class="badge" style="background:var(--s2);color:var(--muted)">${t.formato}</span>`:""}<span class="stars-d" style="font-size:11px">${"★".repeat(t.nota)}</span></div></div></div>`).join("");
 }
 
-// ══════════════════
 // CARROSSÉIS
-// ══════════════════
-function renderCarrossel() {
-  const vista = document.getElementById("cVista").value;
-  document.getElementById("cv-testes").style.display = vista==="testes" ? "block" : "none";
-  document.getElementById("cv-analise").style.display = vista==="analise" ? "block" : "none";
-  if(vista==="testes") renderTestesCarrossel();
-  if(vista==="analise") renderAnaliseCarrossel();
-}
-
 function salvarCarrossel() {
   const titulo = document.getElementById("cTitulo").value.trim();
-  if (!titulo) { toast("Preencha o título"); return; }
-  if (!stars.c) { toast("Dê uma nota de 1 a 5"); return; }
+  if(!titulo) { toast("Preencha o título"); return; }
+  if(!stars.c) { toast("Dê uma nota de 1 a 5"); return; }
   const tests = ld("rl_carrosseis");
-  tests.unshift({
-    id: Date.now(),
-    titulo,
-    ctx: document.getElementById("cCtx").value,
-    alcance: parseInt(document.getElementById("cAlc").value)||0,
-    seguidores: parseInt(document.getElementById("cSeg").value)||0,
-    salvo: parseInt(document.getElementById("cSalvo").value)||0,
-    comp: parseInt(document.getElementById("cComp").value)||0,
-    nota: stars.c,
-    obs: document.getElementById("cObs").value,
-    data: new Date().toLocaleDateString("pt-BR")
-  });
-  sv("rl_carrosseis", tests);
-  ["cTitulo","cCtx","cAlc","cSeg","cSalvo","cComp","cObs"].forEach(id => document.getElementById(id).value="");
-  setStar("c",0); stars.c=0;
-  toast("Carrossel salvo! 🎉");
-  renderTestesCarrossel();
+  tests.unshift({id:Date.now(),titulo,ctx:document.getElementById("cCtx").value,alcance:parseInt(document.getElementById("cAlc").value)||0,seguidores:parseInt(document.getElementById("cSeg").value)||0,salvo:parseInt(document.getElementById("cSalvo").value)||0,comp:parseInt(document.getElementById("cComp").value)||0,nota:stars.c,obs:document.getElementById("cObs").value,data:new Date().toLocaleDateString("pt-BR")});
+  sv("rl_carrosseis",tests);
+  ["cTitulo","cCtx","cAlc","cSeg","cSalvo","cComp","cObs"].forEach(id=>document.getElementById(id).value="");
+  setStar("c",0); stars.c=0; toast("Carrossel salvo! 🎉"); renderTestesCarrossel();
 }
 
 function renderTestesCarrossel() {
   const tests = ld("rl_carrosseis");
-  const tbody = document.getElementById("cTestesBody");
   const empty = document.getElementById("cTestesEmpty");
   const table = document.getElementById("cTestesTable");
-  if (!tests.length) { table.style.display="none"; empty.style.display="block"; return; }
+  if(!tests.length) { table.style.display="none"; empty.style.display="block"; return; }
   table.style.display="table"; empty.style.display="none";
-  tbody.innerHTML = tests.map(t=>`
-    <tr>
-      <td style="max-width:160px;"><span title="${t.titulo}" style="display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-style:italic">${t.titulo}</span><span style="font-size:10px;color:var(--muted)">${t.data||""}</span></td>
-      <td style="max-width:120px;font-size:12px;color:var(--muted)">${t.ctx||"—"}</td>
-      <td>${t.alcance.toLocaleString("pt-BR")}</td>
-      <td style="color:var(--ok);font-weight:600">+${t.seguidores}</td>
-      <td>${t.salvo}</td>
-      <td>${t.comp}</td>
-      <td><span class="stars-d">${"★".repeat(t.nota)}${"☆".repeat(5-t.nota)}</span></td>
-      <td><button class="bsm bdn" onclick="delCarrossel(${t.id})">×</button></td>
-    </tr>`).join("");
+  document.getElementById("cTestesBody").innerHTML = tests.map(t=>`<tr><td style="max-width:160px;"><span title="${t.titulo}" style="display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-style:italic">${t.titulo}</span><span style="font-size:10px;color:var(--muted)">${t.data||""}</span></td><td style="max-width:100px;font-size:12px;color:var(--muted)">${t.ctx||"—"}</td><td>${t.alcance.toLocaleString("pt-BR")}</td><td style="color:var(--ok);font-weight:600">+${t.seguidores}</td><td>${t.salvo}</td><td>${t.comp}</td><td><span class="stars-d">${"★".repeat(t.nota)}${"☆".repeat(5-t.nota)}</span></td><td><button class="bsm bdn" onclick="delCarrossel(${t.id})">×</button></td></tr>`).join("");
 }
 
-function delCarrossel(id) {
-  sv("rl_carrosseis", ld("rl_carrosseis").filter(t=>t.id!==id));
-  renderTestesCarrossel();
-  toast("Removido");
-}
+function delCarrossel(id) { sv("rl_carrosseis",ld("rl_carrosseis").filter(t=>t.id!==id)); renderTestesCarrossel(); toast("Removido"); }
 
 function renderAnaliseCarrossel() {
   const tests = ld("rl_carrosseis");
   const empty = document.getElementById("cAnaliseEmpty");
   const content = document.getElementById("cAnaliseContent");
-  if (tests.length < 3) { empty.style.display="block"; content.style.display="none"; return; }
+  if(tests.length<3) { empty.style.display="block"; content.style.display="none"; return; }
   empty.style.display="none"; content.style.display="block";
-
-  const totalAlc = tests.reduce((a,t)=>a+t.alcance,0);
-  const totalSeg = tests.reduce((a,t)=>a+t.seguidores,0);
-  const totalSalvo = tests.reduce((a,t)=>a+t.salvo,0);
-  const mediaNota = (tests.reduce((a,t)=>a+t.nota,0)/tests.length).toFixed(1);
-
-  document.getElementById("cStats").innerHTML = `
-    <div class="scard"><div class="snum">${tests.length}</div><div class="slbl">Carrosséis</div></div>
-    <div class="scard"><div class="snum">${Math.round(totalAlc/tests.length).toLocaleString("pt-BR")}</div><div class="slbl">Alcance médio</div></div>
-    <div class="scard"><div class="snum">+${totalSeg}</div><div class="slbl">Seguidores</div></div>
-    <div class="scard"><div class="snum">${totalSalvo}</div><div class="slbl">Salvamentos</div></div>
-    <div class="scard"><div class="snum">${mediaNota}</div><div class="slbl">Nota média</div></div>`;
-
-  const sorted = [...tests].sort((a,b)=>b.seguidores-a.seguidores);
-  const maxSeg = sorted[0]?.seguidores||1;
-  document.getElementById("cChartSeg").innerHTML = sorted.slice(0,5).map(t=>`
-    <div class="brow">
-      <div class="blbl" style="font-style:italic;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${t.titulo}">${t.titulo}</div>
-      <div class="btrk"><div class="bfil" style="width:${Math.round(t.seguidores/maxSeg*100)}%"></div></div>
-      <div class="bval">+${t.seguidores}</div>
-    </div>`).join("") || `<p style="color:var(--muted);font-size:13px">Sem dados suficientes.</p>`;
-
-  const sortedSalvo = [...tests].sort((a,b)=>b.salvo-a.salvo);
-  const maxSalvo = sortedSalvo[0]?.salvo||1;
-  document.getElementById("cChartSalvo").innerHTML = sortedSalvo.slice(0,5).map(t=>`
-    <div class="brow">
-      <div class="blbl" style="font-style:italic;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${t.titulo}">${t.titulo}</div>
-      <div class="btrk"><div class="bfil" style="width:${Math.round(t.salvo/maxSalvo*100)}%"></div></div>
-      <div class="bval">${t.salvo}</div>
-    </div>`).join("") || `<p style="color:var(--muted);font-size:13px">Sem dados suficientes.</p>`;
-
-  document.getElementById("cTop").innerHTML = [...tests].sort((a,b)=>b.alcance-a.alcance).slice(0,3).map((t,i)=>`
-    <div class="top-card">
-      <div class="top-n">${i+1}</div>
-      <div style="flex:1">
-        <div style="font-style:italic;margin-bottom:7px;font-size:13px">${t.titulo}</div>
-        <div style="font-size:12px;color:var(--muted);margin-bottom:6px">${t.ctx||""}</div>
-        <div style="display:flex;gap:6px;flex-wrap:wrap">
-          <span class="badge bg">📡 ${t.alcance.toLocaleString("pt-BR")}</span>
-          <span class="badge bgn">+${t.seguidores} seg</span>
-          <span class="badge" style="background:#edf5ff;color:#2a6dcc">💾 ${t.salvo} salvos</span>
-          <span class="stars-d" style="font-size:11px">${"★".repeat(t.nota)}</span>
-        </div>
-      </div>
-    </div>`).join("");
+  document.getElementById("cStats").innerHTML = `<div class="scard"><div class="snum">${tests.length}</div><div class="slbl">Carrosséis</div></div><div class="scard"><div class="snum">${Math.round(tests.reduce((a,t)=>a+t.alcance,0)/tests.length).toLocaleString("pt-BR")}</div><div class="slbl">Alcance médio</div></div><div class="scard"><div class="snum">+${tests.reduce((a,t)=>a+t.seguidores,0)}</div><div class="slbl">Seguidores</div></div><div class="scard"><div class="snum">${tests.reduce((a,t)=>a+t.salvo,0)}</div><div class="slbl">Salvamentos</div></div>`;
+  const sorted=[...tests].sort((a,b)=>b.seguidores-a.seguidores); const maxSeg=sorted[0]?.seguidores||1;
+  document.getElementById("cChartSeg").innerHTML = sorted.slice(0,5).map(t=>`<div class="brow"><div class="blbl">${t.titulo}</div><div class="btrk"><div class="bfil" style="width:${Math.round(t.seguidores/maxSeg*100)}%"></div></div><div class="bval">+${t.seguidores}</div></div>`).join("");
+  const sortedS=[...tests].sort((a,b)=>b.salvo-a.salvo); const maxSalvo=sortedS[0]?.salvo||1;
+  document.getElementById("cChartSalvo").innerHTML = sortedS.slice(0,5).map(t=>`<div class="brow"><div class="blbl">${t.titulo}</div><div class="btrk"><div class="bfil" style="width:${Math.round(t.salvo/maxSalvo*100)}%"></div></div><div class="bval">${t.salvo}</div></div>`).join("");
+  document.getElementById("cTop").innerHTML = [...tests].sort((a,b)=>b.alcance-a.alcance).slice(0,3).map((t,i)=>`<div class="top-card"><div class="top-n">${i+1}</div><div style="flex:1"><div style="font-style:italic;margin-bottom:7px;font-size:13px">${t.titulo}</div><div style="display:flex;gap:6px;flex-wrap:wrap"><span class="badge bg">📡 ${t.alcance.toLocaleString("pt-BR")}</span><span class="badge bgn">+${t.seguidores} seg</span><span class="badge" style="background:#edf5ff;color:#2a6dcc">💾 ${t.salvo}</span><span class="stars-d" style="font-size:11px">${"★".repeat(t.nota)}</span></div></div></div>`).join("");
 }
 
-// ══════════════════
 // STORIES
-// ══════════════════
 let lastStories = [];
 async function gerarStories() {
   const rotina = document.getElementById("sRotina").value.trim();
@@ -918,40 +560,25 @@ async function gerarStories() {
   const obj = document.getElementById("sObj").value;
   const err = document.getElementById("errStories");
   err.classList.remove("show");
-
-  if (!rotina) { toast("Descreva a rotina do dia"); return; }
-
-  setLoad("btnStories","txtStories", true, "Transformar em stories");
-
-  const prompt = `Transforme essa rotina em uma pauta de stories para Instagram.
-Rotina / acontecimentos: ${rotina}
-Nicho / contexto: ${nicho || "social media estratégica"}
-Objetivo dos stories: ${obj}
-
-Gere entre 5 e 8 stories práticos e sequenciais.
-Responda APENAS em JSON: {"stories":[{"numero":1,"tipo":"...","texto":"...","dica":"..."},...]}
-Tipos possíveis: bastidores, autoridade, conexão, engajamento, venda indireta, transição
-O texto deve ser o conteúdo/roteiro do story. A dica deve ser um elemento visual ou de formato (ex: "gravar enquanto faz café", "usar enquete", "texto na tela com fundo simples").`;
-
-  const sys = `Você é especialista em estratégia de stories para Instagram.
-Responda APENAS em JSON puro sem markdown sem backticks.`;
-
+  if(!rotina) { toast("Descreva a rotina do dia"); return; }
+  setLoad("btnStories","txtStories",true,"Transformar em stories");
   try {
-    const r = await callAI(prompt, sys);
-    lastStories = r.stories || [];
-    const list = document.getElementById("storiesList");
-    list.innerHTML = lastStories.map(s=>`
-      <div class="story-item">
-        <div class="story-num">Story ${s.numero} — ${s.tipo}</div>
-        <div class="story-txt">${s.texto}</div>
-        ${s.dica ? `<div style="font-size:12px;color:var(--muted);margin-top:5px;font-style:italic">💡 ${s.dica}</div>` : ""}
-      </div>`).join("");
+    const r = await callAI(
+      `Transforme essa rotina em pauta de stories para Instagram.
+Rotina: ${rotina}
+Nicho: ${nicho||"social media"}
+Objetivo: ${obj}
+Gere 5-8 stories sequenciais.
+JSON: {"stories":[{"numero":1,"tipo":"...","texto":"...","dica":"..."},...]}`,
+      "Você é especialista em stories para Instagram. Responda APENAS em JSON puro sem markdown."
+    );
+    lastStories = r.stories||[];
+    document.getElementById("storiesList").innerHTML = lastStories.map(s=>`<div class="story-item"><div class="story-num">Story ${s.numero} — ${s.tipo}</div><div style="font-size:13px;line-height:1.5">${s.texto}</div>${s.dica?`<div style="font-size:12px;color:var(--muted);margin-top:5px;font-style:italic">💡 ${s.dica}</div>`:""}</div>`).join("");
     document.getElementById("resStories").classList.add("show");
   } catch(e) {
-    err.textContent = "Erro: "+e.message;
-    err.classList.add("show");
+    err.textContent = "Erro: "+e.message; err.classList.add("show");
   }
-  setLoad("btnStories","txtStories", false, "Transformar em stories");
+  setLoad("btnStories","txtStories",false,"Transformar em stories");
 }
 
 function copiarStories() {
@@ -963,129 +590,63 @@ ${s.texto}${s.dica?"
   navigator.clipboard?.writeText(txt).then(()=>toast("Pauta copiada! 📋")).catch(()=>toast("Selecione e copie manualmente"));
 }
 
-// ══════════════════
 // GANCHOS
-// ══════════════════
-function renderGanchos() {
-  const ganchos = ld("rl_ganchos");
-  const cat = document.getElementById("gFiltro").value;
-  const filtered = cat ? ganchos.filter(g=>g.cat===cat) : ganchos;
-  const list = document.getElementById("ganchosList");
-  if (!filtered.length) {
-    list.innerHTML = `<div class="empty"><div class="ei">🪝</div><p>Nenhum gancho ainda.<br>Salve hooks das ideias geradas ou adicione manualmente.</p></div>`;
-    return;
-  }
-  list.innerHTML = filtered.map(g => {
-    const idx = ganchos.indexOf(g);
-    return `<div class="gancho-item">
-      <div style="flex:1">
-        <div class="chook" style="margin-bottom:5px">"${g.hook}"</div>
-        <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
-          <span class="gancho-cat">${g.cat}</span>
-          ${g.ctx?`<span style="font-size:11px;color:var(--muted)">${g.ctx}</span>`:""}
-        </div>
-      </div>
-      <button class="bsm bdn" onclick="delGancho(${idx})">×</button>
-    </div>`;
-  }).join("");
+let addGanchoOpen = false;
+function toggleAddGancho() {
+  addGanchoOpen = !addGanchoOpen;
+  document.getElementById("addGanchoBox").style.display = addGanchoOpen ? "block" : "none";
 }
 
-function abrirAddGancho() { document.getElementById("addGanchoBox").style.display="block"; }
-function fecharAddGancho() { document.getElementById("addGanchoBox").style.display="none"; }
-
-function addGanchoManual() {
+function addGancho() {
   const hook = document.getElementById("gHook").value.trim();
-  if (!hook) { toast("Escreva o hook"); return; }
-  const ganchos = ld("rl_ganchos");
-  ganchos.unshift({
-    id: Date.now(),
-    hook,
-    cat: document.getElementById("gCat").value,
-    ctx: document.getElementById("gCtx").value
-  });
-  sv("rl_ganchos", ganchos);
-  document.getElementById("gHook").value="";
-  document.getElementById("gCtx").value="";
-  fecharAddGancho();
-  toast("Gancho salvo! 🪝");
-  renderGanchos();
+  if(!hook) { toast("Escreva o hook"); return; }
+  const g = ld("rl_ganchos");
+  g.unshift({id:Date.now(),hook,cat:document.getElementById("gCat").value,ctx:document.getElementById("gCtx").value});
+  sv("rl_ganchos",g);
+  document.getElementById("gHook").value=""; document.getElementById("gCtx").value="";
+  toggleAddGancho(); toast("Gancho salvo! 🪝"); renderGanchos();
 }
 
-function delGancho(idx) {
-  const ganchos = ld("rl_ganchos");
-  ganchos.splice(idx,1);
-  sv("rl_ganchos", ganchos);
-  renderGanchos();
-  toast("Removido");
+function renderGanchos() {
+  const g = ld("rl_ganchos");
+  const cat = document.getElementById("gFiltro").value;
+  const filtered = cat ? g.filter(x=>x.cat===cat) : g;
+  const list = document.getElementById("ganchosList");
+  if(!filtered.length) { list.innerHTML=`<div class="empty"><div class="ei">🪝</div><p>Nenhum gancho ainda.<br>Salve hooks das ideias geradas ou adicione manualmente.</p></div>`; return; }
+  list.innerHTML = filtered.map(x=>{ const idx=g.indexOf(x); return `<div class="gancho-item"><div style="flex:1"><div class="chook" style="margin-bottom:5px">"${x.hook}"</div><div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><span class="gancho-cat">${x.cat}</span>${x.ctx?`<span style="font-size:11px;color:var(--muted)">${x.ctx}</span>`:""}</div></div><button class="bsm bdn" onclick="delGancho(${idx})">×</button></div>`; }).join("");
 }
 
-// ══════════════════
+function delGancho(idx) { const g=ld("rl_ganchos"); g.splice(idx,1); sv("rl_ganchos",g); renderGanchos(); toast("Removido"); }
+
 // CONCORRENTE
-// ══════════════════
-async function analisarConcorrente() {
+async function analisarConc() {
   const perfil = document.getElementById("cpPerfil").value.trim();
   const obs = document.getElementById("cpObs").value.trim();
   const nicho = document.getElementById("cpNicho").value.trim();
   const err = document.getElementById("errConc");
   err.classList.remove("show");
-
-  if (!obs) { toast("Descreva o que você observou no perfil"); return; }
-
-  setLoad("btnConc","txtConc", true, "Analisar e adaptar");
-
-  const prompt = `Analise esse perfil e gere insights estratégicos para adaptar ao nicho indicado.
-
-Perfil de referência: ${perfil || "não informado"}
-O que foi observado: ${obs}
-Para adaptar ao nicho: ${nicho || "não informado"}
-
-Gere uma análise com:
-1. O que está funcionando nesse perfil (3-4 pontos)
-2. Por que funciona (análise estratégica rápida)
-3. Como adaptar para o nicho indicado (3-4 ideias práticas)
-
-Responda APENAS em JSON:
-{"funcionando":[{"ponto":"...","porque":"..."}],"adaptacoes":[{"ideia":"...","como":"..."}]}`;
-
-  const sys = `Você é estrategista de conteúdo para Instagram com foco em crescimento de perfis.
-Responda APENAS em JSON puro sem markdown sem backticks.`;
-
+  if(!obs) { toast("Descreva o que você observou"); return; }
+  setLoad("btnConc","txtConc",true,"Analisar e adaptar");
   try {
-    const r = await callAI(prompt, sys);
-    const list = document.getElementById("concList");
+    const r = await callAI(
+      `Analise esse perfil e gere insights estratégicos.
+Perfil: ${perfil||"não informado"}
+Observado: ${obs}
+Adaptar para: ${nicho||"não informado"}
+JSON: {"funcionando":[{"ponto":"...","porque":"..."}],"adaptacoes":[{"ideia":"...","como":"..."}]}`,
+      "Você é estrategista de conteúdo para Instagram. Responda APENAS em JSON puro sem markdown."
+    );
     let html = "";
-
-    if (r.funcionando?.length) {
-      html += `<div style="font-family:BootzyTM;font-size:13px;color:#7c4dcc;margin-bottom:10px;letter-spacing:.5px;">O QUE ESTÁ FUNCIONANDO</div>`;
-      html += r.funcionando.map(f=>`
-        <div class="conc-item">
-          <div class="conc-label">Ponto</div>
-          <div style="font-weight:500;margin-bottom:4px">${f.ponto}</div>
-          <div style="color:var(--muted)">${f.porque}</div>
-        </div>`).join("");
-    }
-
-    if (r.adaptacoes?.length) {
-      html += `<div style="font-family:BootzyTM;font-size:13px;color:var(--accent);margin:16px 0 10px;letter-spacing:.5px;">COMO ADAPTAR</div>`;
-      html += r.adaptacoes.map(a=>`
-        <div class="conc-item">
-          <div class="conc-label">Ideia</div>
-          <div style="font-weight:500;margin-bottom:4px">${a.ideia}</div>
-          <div style="color:var(--muted)">${a.como}</div>
-        </div>`).join("");
-    }
-
-    list.innerHTML = html;
+    if(r.funcionando?.length) { html+=`<div style="font-family:BootzyTM;font-size:13px;color:#7c4dcc;margin-bottom:10px;">O QUE ESTÁ FUNCIONANDO</div>`; html+=r.funcionando.map(f=>`<div class="conc-item"><div class="conc-label">Ponto</div><div style="font-weight:500;margin-bottom:4px">${f.ponto}</div><div style="color:var(--muted)">${f.porque}</div></div>`).join(""); }
+    if(r.adaptacoes?.length) { html+=`<div style="font-family:BootzyTM;font-size:13px;color:var(--accent);margin:16px 0 10px;">COMO ADAPTAR</div>`; html+=r.adaptacoes.map(a=>`<div class="conc-item"><div class="conc-label">Ideia</div><div style="font-weight:500;margin-bottom:4px">${a.ideia}</div><div style="color:var(--muted)">${a.como}</div></div>`).join(""); }
+    document.getElementById("concList").innerHTML = html;
     document.getElementById("resConc").classList.add("show");
   } catch(e) {
-    err.textContent = "Erro: "+e.message;
-    err.classList.add("show");
+    err.textContent = "Erro: "+e.message; err.classList.add("show");
   }
-  setLoad("btnConc","txtConc", false, "Analisar outro ângulo");
+  setLoad("btnConc","txtConc",false,"Outro ângulo");
 }
 
-// INIT
-renderReels();
 renderGanchos();
 </script>
 
