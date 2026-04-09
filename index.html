@@ -389,7 +389,7 @@ function setLoad(btnId, txtId, on, def) {
 
 // API
 async function callAI(prompt, system) {
-  const res = await fetch("/generate", {
+  const res = await fetch("/.netlify/functions/generate", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ prompt, system }),
