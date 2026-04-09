@@ -1,10 +1,1 @@
-{
-  "functions": {
-    "generate.js": {
-      "runtime": "edge"
-    }
-  },
-  "rewrites": [
-    { "source": "/api/generate", "destination": "/generate" }
-  ]
-} 
+{}
